@@ -10,12 +10,22 @@
 
 %%
 
-
+/*  expresion regular para los numeros */
 [0-9]+  { yylval.val = atoi(yytext); return id; }
+
+/*  expresion regular para los places */
 "P" { return 'P'; }
+
+/*  expresion regular para las transiciones*/
 "T" { return 'T'; }
+
+/*  expresion regular para los arcos */
 "A" { return 'A'; }
+
+/*  expresion regular para mostrar la red */
 "M" { return 'M'; }
+
+/*  expresion regular para los simbolos = ( , ) + */
 "=" { return '='; }
 "(" { return '('; }
 "," { return ','; }
